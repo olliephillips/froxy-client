@@ -112,3 +112,15 @@ function requester(position) {
 		});
 	} 
 }
+
+// if these are set in the URI, use them. Useful for link sharing
+function parseURI(){
+	var params = new URLSearchParams(window.location.search);
+	if (params.has("access-key") && params.has("client-id")) {
+		clientID.value = params.get("client-id");
+		accessKey.value = params.get("access-key");
+	}
+}
+
+// parse the URI
+parseURI();
