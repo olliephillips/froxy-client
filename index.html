@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Froxy Client</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/gridly.css"  rel="stylesheet" type="text/css" />
+	<link href="/css/froxy-client.css"  rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<script src="js/NoSleep.js"></script>
+</head>
+  <body>
+	<div id="wrapper">
+		<div id="header" class="row">
+			<div class="column"><h1>FROXY CLIENT</h1></div>
+		</div>
+		<div id="button">
+			<div class="column">
+				<button class="green" id="start-tracking"><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Start tracking</button>	
+				<button class="hidden red" id="stop-tracking"><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Stop tracking</button>	
+				<button id="show-config"><span class="icon"><i class="fas fa-wrench"></i></span> Show config</button>
+				<button class="hidden" id="hide-config"><span class="icon"><i class="fas fa-wrench"></i></span> Hide config</button> 
+			</div>
+		</div>
+		<div id="config" class="hidden row">
+			<div class="column">
+				<div class="field">
+					<label for="client-id">Client ID</label>
+					<input type="text" name="client-id" id="client-id"/>
+					<span class="note">ID to identify the client to the application</span>
+				</div>
+				<div class="field">
+					<label for="access-key">Access Key</label>
+					<input type="text" name="access-key" id="access-key"/>
+					<span class="note">Fencer.io geofence access key</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="status">
+		Idle...
+	</div>
+	<script src="/js/froxy-client.js"></script>
+  </body>
+</html>
