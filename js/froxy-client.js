@@ -46,7 +46,7 @@ function hideConfig(){
 }
 
 // tracking start
-function startTracking(){
+function startTracking(event){
 	// got config?
 	if (checkConfig() == true) {
 		updateStatus("Started")
@@ -79,7 +79,7 @@ function checkConfig(){
 		alert("Please configure first. Click 'Show config'");
 		return false;
 	}
-	return;
+	return true;
 }
 
 // if geolocation fails
